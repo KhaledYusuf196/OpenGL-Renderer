@@ -14,7 +14,7 @@ public:
 	Texture(std::string Path);
 	void CreateTexture(std::string Path, unsigned Filter, unsigned Wrap);
 	Texture(std::string Path, unsigned int Filter, unsigned int Wrap);
-	void Bind() const;
+	void Bind(unsigned int slot = 0) const;
 
 };
 

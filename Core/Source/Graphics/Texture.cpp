@@ -37,7 +37,7 @@ Texture::Texture(std::string Path, unsigned int Filter, unsigned int Wrap) : Tex
 	CreateTexture(Path, Filter, Wrap);
 }
 
-void Texture::Bind() const
+void Texture::Bind(unsigned int slot) const
 {
-	glBindTexture(GL_TEXTURE_2D, TextureID);
+	glBindTextureUnit(slot, TextureID);
 }
