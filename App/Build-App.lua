@@ -12,12 +12,14 @@ project "App"
       "Source",
 
 	  -- Include Core
-	  "../Core/Source"
+	  "../Core/Source",
+	  "../ThirdParty/GLM/include"
    }
 
    links
    {
-      "Core"
+      "Core",
+      "GLM"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")

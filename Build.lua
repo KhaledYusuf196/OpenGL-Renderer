@@ -1,5 +1,5 @@
 -- premake5.lua
-workspace "New Project"
+workspace "OpenGL_Renderer"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
    startproject "App"
@@ -12,6 +12,11 @@ OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
 group "Core"
 	include "Core/Build-Core.lua"
-group ""
 
+group "ThirdParty"
+	include "ThirdParty/GLFW/Build-GLFW.lua"
+   include "ThirdParty/GLEW/Build-GLEW.lua"
+   include "ThirdParty/GLM/Build-GLM.lua"
+group ""
+ 
 include "App/Build-App.lua"

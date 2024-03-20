@@ -9,7 +9,19 @@ project "Core"
 
    includedirs
    {
-      "Source"
+      "Source",
+      "../ThirdParty/GLFW/include",
+      "../ThirdParty/GLEW/include",
+      "../ThirdParty/GLM/include"
+   }
+
+
+
+   links
+   {
+      "GLFW",
+      "GLEW",
+      "GLM"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
@@ -17,7 +29,8 @@ project "Core"
 
    filter "system:windows"
        systemversion "latest"
-       defines { }
+       defines { "GLEW_STATIC" }
+       links { "OpenGL32" }
 
    filter "configurations:Debug"
        defines { "DEBUG" }
