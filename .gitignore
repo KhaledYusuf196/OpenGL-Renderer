@@ -1,11 +1,14 @@
 # Directories
 .vs/
+.idea/
 Binaries/
 
 # Files
 *.vcxproj
 *.vcxproj.user
 *.vcxproj.filters
+*.vcxitems
+*.vcxitems.filters
 *.sln
 *.log
 Makefile
